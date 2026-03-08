@@ -11,10 +11,10 @@ A lightweight distributed lock for Node.js microservices, powered by [ioredis](h
 ## Installation
 
 ```bash
-npm install simple-distributed-lock ioredis
+npm install simple-distributed-lock
+# or
+yarn add simple-distributed-lock
 ```
-
-> `ioredis` is a **peer/co-dependency**. Make sure it's installed in your project.
 
 ## Quick Start
 
