@@ -1,5 +1,5 @@
 {
-  "name": "distributed-lock",
+  "name": "simple-distributed-lock",
   "version": "1.0.0",
   "description": "A lightweight distributed lock for Node.js microservices, powered by ioredis",
   "keywords": [

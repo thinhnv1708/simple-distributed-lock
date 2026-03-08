@@ -1,4 +1,4 @@
-# distributed-lock
+# simple-distributed-lock
 
 A lightweight distributed lock for Node.js microservices, powered by [ioredis](https://github.com/redis/ioredis).
 
@@ -11,7 +11,7 @@ A lightweight distributed lock for Node.js microservices, powered by [ioredis](h
 ## Installation
 
 ```bash
-npm install distributed-lock ioredis
+npm install simple-distributed-lock ioredis
 ```
 
 > `ioredis` is a **peer/co-dependency**. Make sure it's installed in your project.
@@ -20,7 +20,7 @@ npm install distributed-lock ioredis
 
 ```ts
 import Redis from "ioredis";
-import { Lock } from "distributed-lock";
+import { Lock } from "simple-distributed-lock";
 
 const redis = new Redis({ host: "localhost", port: 6379 });
 const lock = new Lock(redis);
