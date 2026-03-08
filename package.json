@@ -1,0 +1,53 @@
+{
+  "name": "distributed-lock",
+  "version": "1.0.0",
+  "description": "A lightweight distributed lock for Node.js microservices, powered by ioredis",
+  "keywords": [
+    "redis",
+    "ioredis",
+    "distributed-lock",
+    "lock",
+    "mutex",
+    "microservices",
+    "distributed",
+    "concurrency"
+  ],
+  "license": "MIT",
+  "author": "thinhnv1708",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thinhnv1708/distributed-lock.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thinhnv1708/distributed-lock/issues"
+  },
+  "homepage": "https://github.com/thinhnv1708/distributed-lock#readme",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "build:total": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:esm": "tsc -p tsconfig.esm.json"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.5",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "ioredis": "^5.10.0"
+  }
+}
